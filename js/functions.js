@@ -94,7 +94,8 @@ function startGame() {
 };
 
 function restartGame() {
-    this.game.state.start("game");
+//    this.game.state.start("game");
+    this.game.state.start("teste");
 };
 
 function gotoNextFase() {
@@ -105,7 +106,7 @@ function gotoNextFase() {
         this.game.time.events.add(Phaser.Timer.SECOND, gotoWin, this);        
     }
     else{
-        this.game.state.start("game");        
+        this.game.state.start("teste");        
     }
 };
 
