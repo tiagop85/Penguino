@@ -1,0 +1,12 @@
+Penguino:
+https://trello.com/b/eBjlW1Wc/pinguino-adventures
+https://github.com/tiagop85/Penguino
+
+Exemplos:
+https://developer.tizen.org/community/tip-tech/creating-isometric-world-phaser.js-using-isometric-plugin
+https://github.com/Niffy/IsometricWorldExample
+http://rotates.org/phaser/iso/examples/character_camera_follow.htm
+
+Util:
+http://www.html5gamedevs.com/topic/8387-phaser-isometric-plugin/
+http://www.html5gamedevs.com/topic/9416-25d-is-it-possible/
