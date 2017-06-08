@@ -9,7 +9,7 @@ GameState.prototype.preload = function () {
 GameState.prototype.create = function () {
     
 //Musica
-    if (game.global.music != 2){
+    if (game.global.music != 2 && game.global.music != -1){
         game.global.music = 2;
         game.sound.stopAll();
         if (game.global.level_atual == 1){

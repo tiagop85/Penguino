@@ -5,7 +5,7 @@ game.global = {
     cheat : 0,
     gravidade : 750,
     click_count : 0,
-    music : -1,
+    music : -1, //-1 desabilitado //0habilitado
     sound_sprite: 'sound_on',
     level_atual: 0,
     tiles_level_atual: ''

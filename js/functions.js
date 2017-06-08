@@ -14,6 +14,13 @@ FunctionsGame.prototype.preload = function() {
     this.game.load.spritesheet('tiles_platform_level1', 'Assets/tileset/TileSet_Fase1_Floresta.png', 32, 32);
     this.game.load.spritesheet('sensor'        , 'Assets/spritesheets/enemies/sensor.png');
 
+    this.game.load.spritesheet('tileImageGreyBlack','Assets/tileset/greyBlack.png',65,66,2);
+    this.game.load.spritesheet('tileImageGreenBlue','Assets/tileset/greenBlue_x0_y32.png',65,66,2);
+    this.game.load.spritesheet('tileImageRedYellow','Assets/tileset/redYellow.png',65,66,2);
+
+    //    this.game.load.tilemap    ('tileMapTeste' ,'Assets/maps/teste.json', null, Phaser.Tilemap.TILED_JSON);
+    this.game.load.image('cube'      , 'Assets/cube.png'); 
+    
 //Level1
     this.game.load.image      ('tileImageFase1','Assets/tileset/TileSet_Fase1_Floresta.png');
     this.game.load.tilemap    ('tileMapFase1' ,'Assets/maps/level1_floresta.json', null, Phaser.Tilemap.TILED_JSON);

@@ -6,10 +6,6 @@ var isoGroup, player;
 
 BasicGame.prototype.preload = function () {    
         console.debug('ok');
-        game.load.image('cube'      , 'Assets/cube.png'); 
-
-//        game.load.image('cube', '../assets/cube.png');
-
         game.time.advancedTiming = true;
 
         // Add and enable the plug-in.
@@ -31,7 +27,7 @@ BasicGame.prototype.preload = function () {
 BasicGame.prototype.create = function () {
     
 //Musica
-    if (game.global.music != 2){
+    if (game.global.music != 2 && game.global.music != -1){
         game.global.music = 2;
         game.sound.stopAll();
         if (game.global.level_atual == 1){
@@ -56,7 +52,6 @@ BasicGame.prototype.create = function () {
 //    this.hurtSound = this.game.add.audio('hurtSound');
 //    this.enemyDeathSound= this.game.add.audio('enemyDeathSound');
 
-//Ativar sistema de física
     this.game.stage.backgroundColor = "#5c82bc";    
     
     
@@ -72,7 +67,12 @@ BasicGame.prototype.create = function () {
             for (var yy = 1024; yy > 0; yy -= 140) {
                 // Create a cube using the new game.add.isoSprite factory method at the specified position.
                 // The last parameter is the group you want to add it to (just like game.add.sprite)
-                cube = game.add.isoSprite(xx, yy, 0, 'cube', 0, isoGroup);
+//                
+//                this.player = this.game.add.sprite(160, 2600, 'player', 5); 
+                this.CubeGrey = this.game.add.sprite(0, 0, 'tileImageGreyBlack', 1); 
+//                
+//                cube = game.add.isoSprite(xx, yy, 0, 'cube', 0, isoGroup);
+                cube = game.add.isoSprite(xx, yy, 0,'tileImageGreyBlack', 1, isoGroup);
                 cube.anchor.set(0.5);
 
                 // Enable the physics body on this cube.
@@ -119,6 +119,11 @@ BasicGame.prototype.create = function () {
     //Game State
     this.totalItems = 0;
     this.totalItemsCapturados = 0;
+    
+//        this.levelAtual = this.game.add.tilemap('tileMapTeste');
+//        this.levelAtual.addTilesetImage('tileImage1','greenBlue_x0_y32');
+//        this.levelAtual.addTilesetImage('tileImage2','greyBlack');
+//        this.levelAtual.addTilesetImage('tileImage3','redYellow');
 
 //HUD    
     this.moldura = this.game.add.sprite(0, 0, 'bgMoldura') 

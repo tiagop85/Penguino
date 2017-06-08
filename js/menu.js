@@ -6,10 +6,10 @@ MenuState.prototype.preload = function() {
 };
 
 MenuState.prototype.create = function() {    
-    if (game.global.music != 1){
+    if (game.global.music != 1 && game.global.music != -1){
         game.global.music = 1;
         game.sound.stopAll();    
-        this.music_menu = this.game.add.music = this.add.audio('music_menu');        
+        this.music_menu = this.game.add.music = this.add.audio('music_menu');         
         this.music_menu.loopFull();
     }
 
