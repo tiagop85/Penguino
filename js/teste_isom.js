@@ -63,8 +63,9 @@ BasicGame.prototype.create = function () {
 
         // Let's make a load of cubes on a grid, but do it back-to-front so they get added out of order.
         var cube;
-        for (var xx = 1024; xx > 0; xx -= 140) {
-            for (var yy = 1024; yy > 0; yy -= 140) {
+        for (var xx = 1024; xx > 0; xx -= (34 * 13)) {
+//        for (var xx = 1024; xx > 0; xx -= 140) {
+            for (var yy = 1024; yy > 0; yy -= 34) {
                 // Create a cube using the new game.add.isoSprite factory method at the specified position.
                 // The last parameter is the group you want to add it to (just like game.add.sprite)
 //                
@@ -86,6 +87,9 @@ BasicGame.prototype.create = function () {
 
                 // Add some X and Y drag to make cubes slow down after being pushed.
                 cube.body.drag.set(100, 100, 0);
+                
+                // Make the cactus body immovable
+	            cube.body.immovable = true;
             }
         }
 
